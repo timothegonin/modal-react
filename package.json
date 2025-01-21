@@ -11,7 +11,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "dependencies": {
+  "peerDependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -37,7 +37,8 @@
     "prop-types": "^15.8.1",
     "storybook": "^8.4.7",
     "typescript": "^5.7.3",
-    "vite": "^6.0.5"
+    "vite": "^6.0.5",
+    "vite-plugin-dts": "^4.5.0"
   },
   "eslintConfig": {
     "extends": [
