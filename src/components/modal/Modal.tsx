@@ -10,7 +10,12 @@ export const Modal = ({ buttonTitle, title, description }: ModalProps) => {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <div className="ui ui-relative">
-      <button onClick={() => setIsOpen(!isOpen)}>{buttonTitle}</button>
+      <button
+        className="ui-bg-blue-400 ui-text-white ui-p-2 ui-rounded-md"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {buttonTitle}
+      </button>
       <div className={`ui-absolute ${isOpen ? 'ui-flex' : 'ui-hidden'}`}>
         <div className="w3-modal-content">
           <div className="w3-container">
