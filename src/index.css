@@ -554,7 +554,39 @@ video {
   display: none;
 }
 
-.ui .ui-bg-black {
+.ui .ui-absolute {
+  position: absolute;
+}
+
+.ui .ui-relative {
+  position: relative;
+}
+
+.ui .ui-m-0 {
+  margin: 0px;
+}
+
+.ui .ui-flex {
+  display: flex;
+}
+
+.ui .ui-hidden {
+  display: none;
+}
+
+.ui .ui-h-screen {
+  height: 100vh;
+}
+
+.ui .ui-w-screen {
+  width: 100vw;
+}
+
+.ui .ui-bg-slate-300 {
   --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity, 1));
+}
+
+.ui .ui-p-0 {
+  padding: 0px;
 }

@@ -6,6 +6,9 @@ const meta = {
   component: Modal,
   tags: ['docsPage'],
   argTypes: {
+    buttonTitle: {
+      control: { type: 'text' },
+    },
     title: {
       control: { type: 'text' },
     },
@@ -20,6 +23,7 @@ type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
   args: {
+    buttonTitle: 'Open Modal',
     title: 'Modal Title',
     description: 'This is a modal',
   },
