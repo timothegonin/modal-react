@@ -50,6 +50,7 @@
     "globals": "^15.14.0",
     "prop-types": "^15.8.1",
     "storybook": "^8.4.7",
+    "tailwindcss": "^3.4.17",
     "typescript": "^5.7.3",
     "vite": "^6.0.5",
     "vite-plugin-dts": "^4.5.0"
