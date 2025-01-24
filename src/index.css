@@ -610,10 +610,6 @@ video {
   justify-content: space-between;
 }
 
-.ui .ui-gap-3 {
-  gap: 0.75rem;
-}
-
 .ui .ui-rounded-md {
   border-radius: 0.375rem;
 }
@@ -628,16 +624,6 @@ video {
 
 .ui .ui-border-t-2 {
   border-top-width: 2px;
-}
-
-.ui .ui-border-red-700 {
-  --tw-border-opacity: 1;
-  border-color: rgb(185 28 28 / var(--tw-border-opacity, 1));
-}
-
-.ui .ui-border-slate-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(100 116 139 / var(--tw-border-opacity, 1));
 }
 
 .ui .ui-border-slate-300 {
