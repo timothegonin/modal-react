@@ -21,10 +21,10 @@ export const Modal = ({ buttonTitle, title, description }: ModalProps) => {
           isOpen ? 'ui-flex' : 'ui-hidden'
         } ui-justify-center ui-items-center ui-bg-slate-500 ui-bg-opacity-70 ui-w-full ui-h-full ui-left-0 ui-top-0`}
       >
-        <div className="ui-flex ui-flex-col ui-bg-white ui-p-4 ui-gap-3 ui-rounded-md ui-w-1/3">
+        <div className="ui-flex ui-flex-col ui-bg-white  ui-rounded-md ui-w-1/3 ui-border ui-border-slate-300">
           {/* modal header */}
-          <div className="ui-flex ui-justify-between ui-items-center">
-            <p>{title}</p>
+          <div className="ui-flex ui-justify-between ui-p-4 ui-items-center ui-border-b-2">
+            <h5 className="ui-font-semibold ui-text-xl">{title}</h5>
             <button onClick={() => setIsOpen(!isOpen)}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -39,11 +39,11 @@ export const Modal = ({ buttonTitle, title, description }: ModalProps) => {
             </button>
           </div>
           {/* modal body */}
-          <div>
+          <div className="ui-px-4 ui-py-6">
             <p>{description}</p>
           </div>
           {/* modal footer */}
-          <div className="ui-flex ui-justify-end">
+          <div className="ui-flex ui-justify-end ui-p-4 ui-border-t-2">
             <button
               className="ui-bg-red-500 ui-text-white ui-py-2 ui-px-4 ui-rounded-md hover:ui-bg-red-300"
               onClick={() => setIsOpen(!isOpen)}
