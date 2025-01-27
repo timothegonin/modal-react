@@ -1,9 +1,15 @@
 {
   "name": "modal-react",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "description": "A simple modal for react",
+  "version": "0.1.0",
   "type": "module",
+  "files": [
+    "/dist"
+  ],
+  "main": "./dist/ui.umd.js",
   "types": "dist/index.d.ts",
+  "module": "./dist/ui.es.js",
   "exports": {
     ".": {
       "import": "./dist/ui.es.js",
@@ -14,9 +20,9 @@
       "default": "./dist/styles.css"
     }
   },
-  "files": [
-    "dist"
-  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build && npm run build:css",
