@@ -4,10 +4,16 @@ type ModalProps = {
   buttonTitle: string
   title: string
   description: string
+  modalStatus: boolean
 }
 
-export const Modal = ({ buttonTitle, title, description }: ModalProps) => {
-  const [isOpen, setIsOpen] = useState(false)
+export const Modal = ({
+  buttonTitle,
+  title,
+  description,
+  modalStatus,
+}: ModalProps) => {
+  const [isOpen, setIsOpen] = useState(modalStatus)
 
   const toogleModal = () => {
     setIsOpen(!isOpen)
