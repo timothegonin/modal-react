@@ -570,6 +570,14 @@ video {
   top: 0px;
 }
 
+.ui .ui-bottom-0 {
+  bottom: 0px;
+}
+
+.ui .ui-right-0 {
+  right: 0px;
+}
+
 .ui .ui-flex {
   display: flex;
 }

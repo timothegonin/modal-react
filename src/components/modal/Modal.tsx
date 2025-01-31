@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 type ModalProps = {
   buttonTitle: string
@@ -15,6 +15,12 @@ export const Modal = ({
 }: ModalProps) => {
   const [isOpen, setIsOpen] = useState(modalStatus)
 
+  useEffect(() => {
+    return () => {
+      setIsOpen(modalStatus)
+    }
+  }, [])
+
   const toogleModal = () => {
     setIsOpen(!isOpen)
   }
@@ -30,7 +36,7 @@ export const Modal = ({
       {isOpen && (
         <div
           onClick={toogleModal}
-          className="ui-absolute ui-flex ui-justify-center ui-items-center ui-bg-slate-500 ui-bg-opacity-70 ui-w-screen ui-h-screen ui-left-0 ui-top-0"
+          className="ui-absolute ui-flex ui-justify-center ui-items-center ui-bg-slate-500 ui-bg-opacity-70 ui-w-screen ui-h-screen ui-left-0 ui-top-0 ui-right-0 ui-bottom-0"
         >
           <div className="ui-flex ui-flex-col ui-bg-white  ui-rounded-md ui-w-1/3 ui-border ui-border-slate-300">
             {/* modal header */}
