@@ -15,6 +15,9 @@ const meta = {
     description: {
       control: { type: 'text' },
     },
+    modalStatus: {
+      control: { type: 'boolean' },
+    },
   },
 } satisfies Meta<typeof Modal>
 
@@ -26,5 +29,6 @@ export const Primary: Story = {
     buttonTitle: 'Open Modal',
     title: 'Modal Title',
     description: 'This is a modal',
+    modalStatus: false,
   },
 }
