@@ -26,7 +26,7 @@ export const Modal = ({
   }
 
   return (
-    <div className="ui ui-relative">
+    <div className="ui">
       <button
         className="ui ui-bg-blue-500 ui-text-white ui-py-2 ui-px-4 ui-rounded-md hover:ui-bg-blue-300"
         onClick={toogleModal}
@@ -36,7 +36,7 @@ export const Modal = ({
       {isOpen && (
         <div
           onClick={toogleModal}
-          className="ui-absolute ui-flex ui-justify-center ui-items-center ui-bg-slate-500 ui-bg-opacity-70 ui-w-screen ui-h-screen ui-left-0 ui-top-0 ui-right-0 ui-bottom-0"
+          className="ui-fixed ui-flex ui-justify-center ui-items-center ui-bg-slate-500 ui-bg-opacity-70 ui-h-full ui-left-0 ui-top-0 ui-right-0 ui-bottom-0"
         >
           <div className="ui-flex ui-flex-col ui-bg-white  ui-rounded-md ui-w-1/3 ui-border ui-border-slate-300">
             {/* modal header */}

@@ -554,6 +554,10 @@ video {
   display: none;
 }
 
+.ui .ui-fixed {
+  position: fixed;
+}
+
 .ui .ui-absolute {
   position: absolute;
 }
@@ -562,20 +566,20 @@ video {
   position: relative;
 }
 
-.ui .ui-left-0 {
-  left: 0px;
-}
-
-.ui .ui-top-0 {
-  top: 0px;
-}
-
 .ui .ui-bottom-0 {
   bottom: 0px;
 }
 
+.ui .ui-left-0 {
+  left: 0px;
+}
+
 .ui .ui-right-0 {
   right: 0px;
+}
+
+.ui .ui-top-0 {
+  top: 0px;
 }
 
 .ui .ui-flex {
@@ -584,6 +588,10 @@ video {
 
 .ui .ui-h-screen {
   height: 100vh;
+}
+
+.ui .ui-h-full {
+  height: 100%;
 }
 
 .ui .ui-w-1\/3 {
