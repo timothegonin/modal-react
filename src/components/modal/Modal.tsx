@@ -20,8 +20,8 @@ export const Modal = ({ title, description, modalStatus }: ModalProps) => {
   }
 
   return (
-    <div className="ui">
-      {isOpen && (
+    isOpen && (
+      <div className="ui">
         <div
           onClick={toogleModal}
           className="ui-fixed ui-flex ui-justify-center ui-items-center ui-bg-slate-500 ui-bg-opacity-70 ui-h-full ui-left-0 ui-top-0 ui-right-0 ui-bottom-0"
@@ -58,7 +58,7 @@ export const Modal = ({ title, description, modalStatus }: ModalProps) => {
             </div>
           </div>
         </div>
-      )}
-    </div>
+      </div>
+    )
   )
 }
