@@ -1,18 +1,12 @@
 import { useEffect, useState } from 'react'
 
 type ModalProps = {
-  buttonTitle: string
   title: string
   description: string
   modalStatus: boolean
 }
 
-export const Modal = ({
-  buttonTitle,
-  title,
-  description,
-  modalStatus,
-}: ModalProps) => {
+export const Modal = ({ title, description, modalStatus }: ModalProps) => {
   const [isOpen, setIsOpen] = useState(modalStatus)
 
   useEffect(() => {
@@ -27,12 +21,6 @@ export const Modal = ({
 
   return (
     <div className="ui">
-      <button
-        className="ui ui-bg-blue-500 ui-text-white ui-py-2 ui-px-4 ui-rounded-md hover:ui-bg-blue-300"
-        onClick={toogleModal}
-      >
-        {buttonTitle}
-      </button>
       {isOpen && (
         <div
           onClick={toogleModal}
