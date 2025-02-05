@@ -1,18 +1,12 @@
 import { useEffect, useState } from 'react'
 
 type ModalProps = {
-  buttonTitle: string
   title: string
   description: string
   modalStatus: boolean
 }
 
-export const Modal = ({
-  buttonTitle,
-  title,
-  description,
-  modalStatus,
-}: ModalProps) => {
+export const Modal = ({ title, description, modalStatus }: ModalProps) => {
   const [isOpen, setIsOpen] = useState(modalStatus)
 
   useEffect(() => {
@@ -26,14 +20,8 @@ export const Modal = ({
   }
 
   return (
-    <div className="ui">
-      <button
-        className="ui ui-bg-blue-500 ui-text-white ui-py-2 ui-px-4 ui-rounded-md hover:ui-bg-blue-300"
-        onClick={toogleModal}
-      >
-        {buttonTitle}
-      </button>
-      {isOpen && (
+    isOpen && (
+      <div className="ui">
         <div
           onClick={toogleModal}
           className="ui-fixed ui-flex ui-justify-center ui-items-center ui-bg-slate-500 ui-bg-opacity-70 ui-h-full ui-left-0 ui-top-0 ui-right-0 ui-bottom-0"
@@ -70,7 +58,7 @@ export const Modal = ({
             </div>
           </div>
         </div>
-      )}
-    </div>
+      </div>
+    )
   )
 }
