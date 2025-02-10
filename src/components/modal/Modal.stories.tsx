@@ -1,7 +1,9 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import { useState } from 'react'
+import type { Meta } from '@storybook/react'
 import { Modal } from './Modal'
+import { action } from '@storybook/addon-actions'
 
-const meta = {
+const meta: Meta<typeof Modal> = {
   title: 'Example/Modal',
   component: Modal,
   tags: ['docsPage'],
@@ -16,15 +18,24 @@ const meta = {
       control: { type: 'boolean' },
     },
   },
-} satisfies Meta<typeof Modal>
+}
 
 export default meta
-type Story = StoryObj<typeof meta>
 
-export const Primary: Story = {
-  args: {
-    title: 'Modal Title',
-    description: 'This is a modal',
-    modalStatus: true,
-  },
+export const Primary = () => {
+  const [isOpen, setIsOpen] = useState(true)
+
+  const handleToggle = () => {
+    action('Modal toggled')()
+    setIsOpen(!isOpen)
+  }
+
+  return (
+    <Modal
+      title="Modal Title"
+      description="This is a modal"
+      modalStatus={isOpen}
+      onToggle={handleToggle}
+    />
+  )
 }
